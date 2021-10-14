@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Prefab, instantiate, Vec3, utils, randomRange, SphereLightComponent, Color, EditBox } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate, Vec3, randomRange, SphereLightComponent, Color, EditBox, MeshRenderer, Vec4 } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('CreateSphereLight')
@@ -56,6 +56,13 @@ export class CreateLight extends Component {
             lightData.luminousFlux *= lightData.luminousFlux;
             console.log(lightData.luminousFlux);
             lightData.color = new Color(randomRange(0, 255), randomRange(0, 255), randomRange(0, 255));
+
+            let model = lightInst.getComponentInChildren(MeshRenderer);
+            if (model)
+            {
+                model.getMaterialInstance(0)!.setProperty("emissive", lightData.color);
+                model.getMaterialInstance(0)!.setProperty("mainColor", new Color(0, 0, 0, 255));
+            } 
 
             this._lightLst.push(lightInst);
             this._timeLst.push(0);
