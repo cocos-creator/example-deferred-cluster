@@ -4,7 +4,7 @@ const { ccclass, property } = _decorator;
 @ccclass('CreateSpotLight')
 export class CreateLight extends Component {
     @property(Prefab)
-    light: Prefab = null;
+    light: Prefab = null!;
     
     private _initP = new Vec3(0.0, 0.0, 0.0);
     private _nowP = new Vec3(0.0, 0.0, 0.0);
@@ -17,7 +17,7 @@ export class CreateLight extends Component {
     private _num = 0;
 
     private _lightLst: Node[] = [];
-    private _lightCnt: number = 50;
+    private _lightCnt: number = 5;
     private _timeLst: number[] = [];
     private _spdLst: Vec3[] = [];
     private _vList: Vec3[] = [];
@@ -76,13 +76,7 @@ export class CreateLight extends Component {
     }
 
     update (deltaTime: number) {
-
-     
         this._num ++;
- 
-        if (this._num % 50 === 0) {
-
-        }
 
         for(let i = 0; i < this._lightCnt; i++){
             this.number2 = randomRange(0.1,0.9) / 50.0;
@@ -112,7 +106,7 @@ export class CreateLight extends Component {
             Quat.normalize(nodeRot, nodeRot);
 
             lightNode.setRotation(nodeRot);
-            
+
             let nowPos = lightNode.getPosition();
             lightNode.setPosition(
             nowPos.x + Math.sin(this._timeLst[i] * spd.x) * this.number4 * this._vList[i].x, 

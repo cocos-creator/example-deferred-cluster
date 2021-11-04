@@ -14,6 +14,7 @@
     "__type__": "cc.Node",
     "_name": "Sphere Light add",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "_parent": null,
     "_children": [
       {
@@ -187,9 +188,11 @@
       "__id__": 9
     },
     "_size": 1,
+    "_luminanceHDR": 1266.5147955292223,
     "_luminance": 1266.5147955292223,
+    "_luminanceLDR": 329.821561335735,
     "_term": 0,
-    "_range": 50,
+    "_range": 8,
     "_id": ""
   },
   {

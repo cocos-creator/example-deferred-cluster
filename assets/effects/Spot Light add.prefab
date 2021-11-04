@@ -14,6 +14,7 @@
     "__type__": "cc.Node",
     "_name": "Spot Light add",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "_parent": null,
     "_children": [
       {
@@ -187,9 +188,11 @@
       "__id__": 9
     },
     "_size": 1,
+    "_luminanceHDR": 1913.8445799108247,
     "_luminance": 1913.8445799108247,
+    "_luminanceLDR": 498.3970260184439,
     "_term": 0,
-    "_range": 50,
+    "_range": 5,
     "_spotAngle": 30,
     "_id": ""
   },
