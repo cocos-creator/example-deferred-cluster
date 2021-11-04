@@ -3,6 +3,14 @@
     "web-desktop": {
       "configID": "be7cb2",
       "services": []
+    },
+    "mac": {
+      "configID": "be7cb2",
+      "services": []
+    },
+    "android": {
+      "configID": "be7cb2",
+      "services": []
     }
   },
   "builder-options": {
